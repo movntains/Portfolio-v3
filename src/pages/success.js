@@ -26,15 +26,15 @@ const Title = styled.h1`
 
 const Subtitle = styled.p``;
 
-const NotFoundPage = () => (
+const SuccessPage = () => (
   <Layout>
     <Main>
       <Container>
-        <Title>Not Found</Title>
-        <Subtitle>This page does not exist. Sorry about that.</Subtitle>
+        <Title>Success</Title>
+        <Subtitle>Thank you for contacting me. I'll be in touch!</Subtitle>
       </Container>
     </Main>
   </Layout>
 );
 
-export default NotFoundPage;
+export default SuccessPage;
