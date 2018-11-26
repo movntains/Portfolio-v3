@@ -33,29 +33,29 @@ const ProjectDisplayContainer = styled.div`
 class Project extends Component {
   filterProjects = props => {
     switch (props.location.pathname) {
-      case '/projects':
+      case '/projects/':
         return renderProjects(ALL_PROJECTS);
-      case '/projects/graphQL':
+      case '/projects/graphQL/':
         return renderProjects(
           ALL_PROJECTS.filter(({ tech }) => tech.includes('GraphQL'))
         );
-      case '/projects/mongoDB':
+      case '/projects/mongoDB/':
         return renderProjects(
           ALL_PROJECTS.filter(({ tech }) => tech.includes('MongoDB'))
         );
-      case '/projects/node':
+      case '/projects/node/':
         return renderProjects(
           ALL_PROJECTS.filter(({ tech }) => tech.includes('Node.js'))
         );
-      case '/projects/react':
+      case '/projects/react/':
         return renderProjects(
           ALL_PROJECTS.filter(({ tech }) => tech.includes('React'))
         );
-      case '/projects/front-end':
+      case '/projects/front-end/':
         return renderProjects(
           ALL_PROJECTS.filter(project => project.tag === 'front-end')
         );
-      case '/projects/full-stack':
+      case '/projects/full-stack/':
         return renderProjects(
           ALL_PROJECTS.filter(project => project.tag === 'full-stack')
         );
