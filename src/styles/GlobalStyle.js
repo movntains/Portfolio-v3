@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: ${theme.colors.navy};
     font-family: ${theme.fonts.NewsCycle};
     font-size: ${theme.fontSizes.xlarge};
-    ${media.phablet`font-size: ${theme.fontSizes.large};`}
+    ${media.phablet`font-size: ${theme.fontSizes.large};`};
     color: ${theme.colors.slate};
     line-height: 1.25;
 

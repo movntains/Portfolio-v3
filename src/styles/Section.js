@@ -8,7 +8,6 @@ const Section = styled.section`
   margin: 0 auto;
   padding: 150px 0;
   animation-name: ${mixins.fadeIn};
-  /* animation-delay: 1000ms; */
   animation-duration: 1.5s;
   ${media.tablet`padding: 100px 0;`};
 `;

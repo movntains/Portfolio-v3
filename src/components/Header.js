@@ -40,7 +40,7 @@ const HeaderContainer = styled.header`
   pointer-events: auto !important;
   user-select: auto !important;
   ${media.desktop`padding: 0 40px;`};
-  ${media.tablet`padding: 0 25px; overflow-x: hidden;`};
+  ${media.tablet`padding: 0 25px;`};
 `;
 
 const Navbar = styled(Nav)`
@@ -71,8 +71,6 @@ const LogoLink = styled(Link)`
 
 const Hamburger = styled.div`
   ${mixins.flexCenter};
-  display: none;
-  ${media.tablet`display: flex;`};
   overflow: visible;
   margin: 0 -12px 0 0;
   padding: 15px;
@@ -84,6 +82,8 @@ const Hamburger = styled.div`
   color: inherit;
   border: 0;
   background-color: transparent;
+  display: none;
+  ${media.tablet`display: flex;`};
 `;
 
 const HamburgerBox = styled.div`
@@ -204,13 +204,11 @@ class Header extends Component {
 
     window.addEventListener('scroll', () => throttle(this.handleScroll()));
     window.addEventListener('resize', () => throttle(this.handleResize()));
-    window.addEventListener('keydown', () => this.handleKeydown());
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', () => this.handleScroll());
     window.removeEventListener('resize', () => this.handleResize());
-    window.removeEventListener('keydown', () => this.handleKeydown());
   }
 
   handleScroll = () => {
@@ -245,18 +243,6 @@ class Header extends Component {
     }
   };
 
-  handleKeydown = evt => {
-    const { menuOpen } = this.state;
-
-    if (!menuOpen) {
-      return;
-    }
-
-    if (evt.key === 'Escape' || evt.key === 'Esc') {
-      this.toggleMenu();
-    }
-  };
-
   toggleMenu = () => {
     const { menuOpen } = this.state;
 
@@ -284,6 +270,7 @@ class Header extends Component {
       <HeaderContainer
         ref={el => {
           this.header = el;
+          return el;
         }}
         scrollDirection={scrollDirection}
       >
@@ -338,11 +325,13 @@ class Header extends Component {
             </NavList>
           </NavLinks>
         </Navbar>
-        <Menu
-          navLinks={navLinks}
-          menuOpen={menuOpen}
-          handleMenuClick={e => this.handleMenuClick(e)}
-        />
+        {navLinks && (
+          <Menu
+            navLinks={navLinks}
+            menuOpen={menuOpen}
+            handleMenuClick={e => this.handleMenuClick(e)}
+          />
+        )}
       </HeaderContainer>
     );
   }
