@@ -30,7 +30,7 @@ const Sidebar = styled.div`
   position: relative;
   right: 0;
   width: 50vw;
-  height: 100vh;
+  height: 100%;
   margin-left: auto;
   padding: 50px;
   background-color: ${theme.colors.lightNavy};
