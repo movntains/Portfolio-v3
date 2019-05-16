@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from './theme';
 import media from './media';
 
-const Heading = styled.h3`
+const Heading = styled.h1`
   display: flex;
   align-items: center;
   position: relative;
@@ -21,12 +21,10 @@ const Heading = styled.h3`
     display: block;
     position: relative;
     top: 1px;
-    width: 300px;
+    width: 100%;
     height: 1px;
     margin-left: 20px;
     background-color: ${theme.colors.teal};
-    ${media.desktop`width: 200px;`};
-    ${media.tablet`width: 100%;`};
     ${media.thone`margin-left: 10px;`};
   }
 `;

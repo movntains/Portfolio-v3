@@ -39,7 +39,11 @@ const FRAMEWORKS_FRONTEND = [
 
 const FRAMEWORKS_BACKEND = [{ skill: 'Express.js' }, { skill: 'Node.js' }];
 
-const FRAMEWORKS_TEST = [{ skill: 'Mocha' }];
+const FRAMEWORKS_TEST = [
+  { skill: 'Enzyme' },
+  { skill: 'Jest' },
+  { skill: 'Mocha' }
+];
 
 const Frameworks = () => (
   <Container>

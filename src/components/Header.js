@@ -14,10 +14,6 @@ import Nav from '../styles/Nav';
 import throttle from '../utils/throttle';
 import { headerHeight } from '../config/config';
 
-// -----------------------------------
-// ----- START STYLED COMPONENTS -----
-// -----------------------------------
-
 const HeaderContainer = styled.header`
   ${mixins.flexBetween};
   position: fixed;
@@ -151,14 +147,15 @@ const NavLinks = styled.div`
 `;
 
 const NavList = styled.ul`
-  div {
-    ${mixins.flexBetween};
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 const NavListItem = styled.li`
   position: relative;
-  margin: 0 10px;
+  margin: 0 15px;
   font-size: ${theme.fontSizes.small};
 
   a {
@@ -175,15 +172,10 @@ const NavLink = styled(Link)`
   text-transform: uppercase;
 
   &.active {
-    padding: 12px 10px;
     border-bottom: 1px solid ${theme.colors.teal};
     text-transform: uppercase;
   }
 `;
-
-// ---------------------------------
-// ----- END STYLED COMPONENTS -----
-// ---------------------------------
 
 const DELTA = 5;
 
@@ -302,7 +294,7 @@ class Header extends Component {
           </TransitionGroup>
           <NavLinks>
             <NavList>
-              <TransitionGroup>
+              <TransitionGroup component={null}>
                 {isMounted &&
                   navLinks &&
                   navLinks.map(({ url, name }, i) => (

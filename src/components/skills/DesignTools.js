@@ -26,7 +26,7 @@ const DESIGN_TOOLS_ARRAY = [
   { skill: 'Adobe Photoshop' },
   { skill: 'Adobe XD' },
   { skill: 'Lucidchart' },
-  { skill: 'Microsoft Viseo Professional' },
+  { skill: 'Microsoft Visio Professional' },
   { skill: 'Sketch' }
 ];
 

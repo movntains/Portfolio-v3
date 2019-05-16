@@ -21,14 +21,18 @@ const SkillsList = styled.ul`
   list-style: none;
 `;
 
-const TEMPLATE_ENGINES_ARRAY = [{ skill: 'EJS' }, { skill: 'Pug' }];
+const DEVOPS_TOOLS_ARRAY = [
+  { skill: 'Docker' },
+  { skill: 'Kubernetes' },
+  { skill: 'Travis CI' }
+];
 
-const TemplateEngines = () => (
+const DevOpsTools = () => (
   <Container>
     <SkillContainer>
-      <SkillsList>{renderSkills(TEMPLATE_ENGINES_ARRAY)}</SkillsList>
+      <SkillsList>{renderSkills(DEVOPS_TOOLS_ARRAY)}</SkillsList>
     </SkillContainer>
   </Container>
 );
 
-export default TemplateEngines;
+export default DevOpsTools;

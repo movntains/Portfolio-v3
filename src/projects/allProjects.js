@@ -60,7 +60,7 @@ export const ALL_PROJECTS = [
       'Node.js',
       'Prisma',
       'React',
-      'styled-components'
+      'Styled Components'
     ],
     tag: 'full-stack'
   },
@@ -71,7 +71,7 @@ export const ALL_PROJECTS = [
     internal: '',
     description:
       'A React app that functions as a Pomodoro timer. It utilizes styled components and has the functionality for increasing/decreasing the session time, break time, and session goal number, as well as pausing and resetting the timer.',
-    tech: ['Flexbox', 'React', 'styled-components'],
+    tech: ['Flexbox', 'React', 'Styled Components'],
     tag: 'front-end'
   }
 ];

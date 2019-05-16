@@ -10,17 +10,13 @@ import MinorHeading from '../styles/MinorHeading';
 import ProgrammingLanguages from '../components/skills/ProgrammingLanguages';
 import Frameworks from '../components/skills/Frameworks';
 import Databases from '../components/skills/Databases';
+import DevOpsTools from '../components/skills/DevOpsTools';
 import TemplateEngines from '../components/skills/TemplateEngines';
 import DevelopmentTools from '../components/skills/DevelopmentTools';
 import DesignTools from '../components/skills/DesignTools';
 
 const SkillsContainer = styled(Section)`
   position: relative;
-
-  span {
-    font-style: italic;
-    color: ${theme.colors.lightSlate};
-  }
 `;
 
 class SkillsPage extends Component {
@@ -31,10 +27,11 @@ class SkillsPage extends Component {
           <SkillsContainer>
             <Heading>Skills</Heading>
             <p>
-              I believe in the motto <span>"never stop learning"</span>, so I am
-              always working to improve my current skills as well as to add new
-              skills to my repertoire. This goes for technical skills as well as
-              soft skills.
+              I am dedicated to being a lifelong learner, so I am always working
+              to improve my current skills, as well as to add new skills to my
+              repertoire. I recognize that the software development field is
+              constantly evolving, so I am always open to branching out and
+              learning new languages, frameworks, and tools.
             </p>
             <MinorHeading>Programming Languages</MinorHeading>
             <ProgrammingLanguages />
@@ -42,6 +39,8 @@ class SkillsPage extends Component {
             <Frameworks />
             <MinorHeading>Databases</MinorHeading>
             <Databases />
+            <MinorHeading>DevOps Tools</MinorHeading>
+            <DevOpsTools />
             <MinorHeading>Template Engines</MinorHeading>
             <TemplateEngines />
             <MinorHeading>Development Tools</MinorHeading>

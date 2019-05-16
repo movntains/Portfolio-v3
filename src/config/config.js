@@ -4,6 +4,7 @@ module.exports = {
     'Fullstack software engineer who specializes in developing single-page web applications',
   siteUrl: 'https://www.ropprmn.com/',
   siteLanguage: 'en_US',
+  email: 'oppermanre17@gmail.com',
   profileLinks: [
     {
       name: 'GitHub',
@@ -12,6 +13,10 @@ module.exports = {
     {
       name: 'CodePen',
       url: 'https://codepen.io/movntains/'
+    },
+    {
+      name: 'Medium',
+      url: 'https://medium.com/@movntains'
     }
   ],
   nav: [
@@ -30,10 +35,6 @@ module.exports = {
     {
       name: 'Blog',
       url: '/blog/'
-    },
-    {
-      name: 'Contact',
-      url: '/contact/'
     }
   ],
   headerHeight: 100,

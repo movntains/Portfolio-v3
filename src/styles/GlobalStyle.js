@@ -4,8 +4,6 @@ import theme from './theme';
 import media from './media';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css?family=News+Cycle:400,700');
-
   html {
     box-sizing: border-box;
     width: 100%;
@@ -25,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     background-color: ${theme.colors.navy};
-    font-family: ${theme.fonts.NewsCycle};
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: ${theme.fontSizes.xlarge};
     ${media.phablet`font-size: ${theme.fontSizes.large};`};
     color: ${theme.colors.slate};
@@ -116,7 +114,6 @@ const GlobalStyle = createGlobalStyle`
     border-radius: ${theme.borderRadius};
     border: 2px solid transparent;
     font-size: ${theme.fontSizes.medium};
-    font-family: ${theme.fonts.NewsCycle};
     color: ${theme.colors.lightestSlate};
 
     &:focus {
@@ -141,8 +138,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   button {
-    font-family: ${theme.fonts.NewsCycle};
-
     &:focus {
       outline: 0;
       border: 1px solid ${theme.colors.teal};

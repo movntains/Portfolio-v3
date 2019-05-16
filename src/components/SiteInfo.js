@@ -9,7 +9,7 @@ const SITE_INFO_ARRAY = [
     item: 'This site was developed with Gatsby.js v2.'
   },
   {
-    item: `It's styled with styled-components.`
+    item: `It's styled with Styled Components.`
   },
   { item: `It's hosted on Netlify.` },
   { item: 'Blog posts are retrieved with a GraphQL query.' },
@@ -44,7 +44,7 @@ const SiteInfo = () =>
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
       >
-        <path d="M16.172 9l-6.071-6.071 1.414-1.414L20 10l-.707.707-7.778 7.778-1.414-1.414L16.172 11H0V9z" />
+        <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
       </svg>
       <p>{item}</p>
     </SiteInfoItem>

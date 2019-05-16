@@ -1,24 +1,40 @@
 code[class*='language-'],
 pre[class*='language-'] {
-  color: #aab1c0;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  font-family: Menlo, Monaco, Consolas, 'Courier New', Courier, monospace;
-  font-size: 16px;
+  font-family: Consolas, Menlo, Monaco, 'Andale Mono WT', 'Andale Mono',
+    'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L',
+    'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.375;
   direction: ltr;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-  line-height: 1.5;
-
-  -moz-tab-size: 2;
-  -o-tab-size: 2;
-  tab-size: 2;
-
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
   -webkit-hyphens: none;
-  -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  background: #f5f7ff;
+  color: #5e6687;
+}
+
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection,
+code[class*='language-']::-moz-selection,
+code[class*='language-'] ::-moz-selection {
+  text-shadow: none;
+  background: #dfe2f1;
+}
+
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection,
+code[class*='language-']::selection,
+code[class*='language-'] ::selection {
+  text-shadow: none;
+  background: #dfe2f1;
 }
 
 /* Code blocks */
@@ -26,105 +42,94 @@ pre[class*='language-'] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-  border-radius: 0.3em;
-}
-
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
-  background: #2a324b;
 }
 
 /* Inline code */
 :not(pre) > code[class*='language-'] {
-  margin: 0 0.1em;
-  padding: 0.2em;
-  border-radius: 4px;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  background-color: #a8b2d1;
+  color: #01050b;
 }
 
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #7b89b5;
+  color: #898ea4;
 }
 
 .token.punctuation {
-  color: #a6b2c0;
+  color: #5e6687;
 }
 
-.namespace {
+.token.namespace {
   opacity: 0.7;
 }
 
-.token.property,
-.token.keyword,
-.token.tag {
-  color: #a93f55;
-}
-
-.token.class-name {
-  color: #ffffb6;
-}
-
+.token.operator,
 .token.boolean,
-.token.constant {
-  color: #99cc99;
-}
-
-.token.symbol,
-.token.deleted {
-  color: #f92672;
-}
-
 .token.number {
-  color: #2bbac5;
+  color: #c76b29;
 }
 
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-  color: #679289;
+.token.property {
+  color: #c08b30;
 }
 
-.token.variable {
-  color: #e5c07b;
+.token.tag {
+  color: #3d8fd1;
 }
 
-.token.operator {
-  color: #ededed;
+.token.string {
+  color: #22a2c9;
 }
 
-.token.entity {
-  color: #ffffb6;
+.token.selector {
+  color: #6679cc;
 }
 
-.token.url {
-  color: #96cbfe;
+.token.attr-name {
+  color: #c76b29;
 }
 
+.token.entity,
+.token.url,
 .language-css .token.string,
 .style .token.string {
-  color: #87c38a;
+  color: #22a2c9;
 }
 
-.token.atrule,
-.token.attr-value {
-  color: #f9ee98;
+.token.attr-value,
+.token.keyword,
+.token.control,
+.token.directive,
+.token.unit {
+  color: #ac9739;
 }
 
-.token.function {
-  color: #5f88c2;
+.token.statement,
+.token.regex,
+.token.atrule {
+  color: #22a2c9;
 }
 
-.token.regex {
-  color: #e9c062;
+.token.placeholder,
+.token.variable {
+  color: #3d8fd1;
 }
 
-.token.important {
-  color: #fd971f;
+.token.deleted {
+  text-decoration: line-through;
+}
+
+.token.inserted {
+  border-bottom: 1px dotted #202746;
+  text-decoration: none;
+}
+
+.token.italic {
+  font-style: italic;
 }
 
 .token.important,
@@ -132,10 +137,37 @@ pre[class*='language-'] {
   font-weight: bold;
 }
 
-.token.italic {
-  font-style: italic;
+.token.important {
+  color: #c94922;
 }
 
 .token.entity {
   cursor: help;
+}
+
+pre > code.highlight {
+  outline: 0.4em solid #c94922;
+  outline-offset: 0.4em;
+}
+
+.line-numbers .line-numbers-rows {
+  border-right-color: #dfe2f1 !important;
+}
+
+.line-numbers-rows > span:before {
+  color: #979db4 !important;
+}
+
+.line-highlight {
+  background: rgba(32, 39, 70, 0.2) !important;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(32, 39, 70, 0.2) 70%,
+    rgba(32, 39, 70, 0)
+  ) !important;
+  background: linear-gradient(
+    to right,
+    rgba(32, 39, 70, 0.2) 70%,
+    rgba(32, 39, 70, 0)
+  ) !important;
 }

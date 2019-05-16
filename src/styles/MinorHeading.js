@@ -11,7 +11,7 @@ const MinorHeading = styled.h4`
   margin: 50px 0 20px;
   white-space: nowrap;
   font-size: ${theme.fontSizes.xxlarge};
-  color: ${theme.colors.grey};
+  color: ${theme.colors.gold};
   text-transform: uppercase;
   ${media.tablet`font-size: 18px;`};
 
@@ -20,11 +20,10 @@ const MinorHeading = styled.h4`
     display: block;
     position: relative;
     top: 2px;
-    width: 200px;
+    width: 100%;
     height: 1px;
     margin-left: 20px;
     background-color: ${theme.colors.grey};
-    ${media.desktop`width: 100%`};
     ${media.thone`margin-left: 10px;`};
   }
 `;

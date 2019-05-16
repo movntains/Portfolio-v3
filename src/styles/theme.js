@@ -29,11 +29,6 @@ const theme = {
     teal: '#2bbac5'
   },
 
-  fonts: {
-    NewsCycle:
-      'News Cycle, San Francisco, SF Pro Text, -apple-system, system-ui, BlinkMacSystemFont, Roboto, Helvetica Neue, Segoe UI, Arial, sans-serif'
-  },
-
   fontSizes: {
     xsmall: '12px',
     smallish: '13px',

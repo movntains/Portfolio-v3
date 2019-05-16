@@ -6,10 +6,6 @@ import theme from '../styles/theme';
 import media from '../styles/media';
 import mixins from '../styles/mixins';
 
-// -----------------------------------
-// ----- BEGIN STYLED COMPONENTS -----
-// -----------------------------------
-
 const Dropdown = styled.div`
   ${media.desktop`
     display: flex;
@@ -104,7 +100,7 @@ const DisciplineFilter = styled.div`
 const FilterHeading = styled.p`
   margin-top: 30px;
   margin-bottom: 5px;
-  color: ${theme.colors.lightGrey};
+  color: ${theme.colors.slate};
 `;
 
 const FilterLink = styled(Link)`
@@ -116,10 +112,6 @@ const FilterLink = styled(Link)`
     color: ${theme.colors.teal};
   }
 `;
-
-// ---------------------------------
-// ----- END STYLED COMPONENTS -----
-// ---------------------------------
 
 const TECHNOLOGY_LINKS = [
   { name: 'GraphQL', src: '/projects/graphQL/' },

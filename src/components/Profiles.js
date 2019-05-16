@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
 
-import { profileLinks } from '../config/config';
+import { profileLinks, email } from '../config/config';
 
 import theme from '../styles/theme';
 import media from '../styles/media';
 import GitHubIcon from './icons/GitHubIcon';
 import CodePenIcon from './icons/CodePenIcon';
+import MediumIcon from './icons/MediumIcon';
+import EmailIcon from './icons/EmailIcon';
 
-const ProfilesContainer = styled.div`
+const ProfilesContainer = styled.aside`
   position: fixed;
   bottom: 0;
   left: 40px;
@@ -46,6 +48,7 @@ const ProfileLink = styled.a`
   svg {
     width: 18px;
     height: 18px;
+    fill: ${theme.colors.lightSlate};
   }
 `;
 
@@ -78,9 +81,15 @@ class Profiles extends Component {
                       >
                         {name === 'GitHub' ? <GitHubIcon /> : ''}
                         {name === 'CodePen' ? <CodePenIcon /> : ''}
+                        {name === 'Medium' ? <MediumIcon /> : ''}
                       </ProfileLink>
                     </ProfileItem>
                   ))}
+                <ProfileItem>
+                  <ProfileLink href={`mailto:${email}`}>
+                    <EmailIcon />
+                  </ProfileLink>
+                </ProfileItem>
               </ProfileItemList>
             </CSSTransition>
           )}

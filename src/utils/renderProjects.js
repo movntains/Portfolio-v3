@@ -8,10 +8,6 @@ import FolderIcon from '../components/icons/FolderIcon';
 import GitHubIcon from '../components/icons/GitHubIcon';
 import ExternalLinkIcon from '../components/icons/ExternalLinkIcon';
 
-// -----------------------------------
-// ----- START STYLED COMPONENTS -----
-// -----------------------------------
-
 const ProjectInner = styled.div`
   ${mixins.flexBetween};
   flex-direction: column;
@@ -20,7 +16,7 @@ const ProjectInner = styled.div`
   height: 100%;
   padding: 25px;
   border-radius: ${theme.borderRadius};
-  background-color: ${theme.colors.lightNavy};
+  background-color: ${theme.colors.darkNavy};
   transition: ${theme.transition};
 `;
 
@@ -75,7 +71,7 @@ const IconLink = styled.a`
   }
 `;
 
-const ProjectName = styled.h5`
+const ProjectName = styled.h2`
   margin: 0 0 10px;
   font-size: ${theme.fontSizes.xxlarge};
   color: ${theme.colors.lightestSlate};
@@ -111,10 +107,6 @@ const TechList = styled.ul`
     }
   }
 `;
-
-// ---------------------------------
-// ----- END STYLED COMPONENTS -----
-// ---------------------------------
 
 export default projectsArray =>
   projectsArray.map(

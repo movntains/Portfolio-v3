@@ -10,6 +10,7 @@ import Layout from '../components/Layout';
 import Main from '../styles/Main';
 import Section from '../styles/Section';
 import Heading from '../styles/Heading';
+import RightArrowIcon from '../components/icons/RightArrowIcon';
 
 const BlogContainer = styled(Section)`
   position: relative;
@@ -37,6 +38,8 @@ const DateTitleContainer = styled.div`
 const BlogItemDate = styled.p`
   margin-bottom: 3px;
   font-size: ${theme.fontSizes.medium};
+  text-transform: uppercase;
+  color: ${theme.colors.lightSlate};
 `;
 
 const MediumLinkContainer = styled.div`
@@ -44,14 +47,21 @@ const MediumLinkContainer = styled.div`
 `;
 
 const ViewOnMediumBtn = styled.a`
-  padding: 10px;
-  background-color: ${theme.colors.grey};
-  border-radius: ${theme.borderRadius};
-  font-size: ${theme.fontSizes.small};
+  font-size: ${theme.fontSizes.medium};
   color: ${theme.colors.lightSlate};
 
   &:hover {
-    background-color: ${theme.colors.lightGrey};
+    svg {
+      fill: ${theme.colors.gold};
+    }
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    padding-bottom: 2px;
+    fill: ${theme.colors.lightSlate};
   }
 `;
 
@@ -67,7 +77,7 @@ class BlogPage extends Component {
       <Layout>
         <Main>
           <BlogContainer>
-            <Heading>Blog Index</Heading>
+            <Heading>Articles</Heading>
             <IndexList>
               {data.allMarkdownRemark.edges.map((post, i) => (
                 <BlogItem key={i}>
@@ -84,6 +94,7 @@ class BlogPage extends Component {
                       rel="nofollower noopener noreferrer"
                     >
                       View on Medium
+                      <RightArrowIcon />
                     </ViewOnMediumBtn>
                   </MediumLinkContainer>
                 </BlogItem>
