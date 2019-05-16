@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 
-import { profileLinks } from '../config/config';
+import { profileLinks, email } from '../config/config';
 import GitHubIcon from './icons/GitHubIcon';
 import CodePenIcon from './icons/CodePenIcon';
+import MediumIcon from './icons/MediumIcon';
+import EmailIcon from './icons/EmailIcon';
 import theme from '../styles/theme';
 import mixins from '../styles/mixins';
 import media from '../styles/media';
@@ -70,9 +72,15 @@ class Footer extends Component {
                   >
                     {name === 'GitHub' && <GitHubIcon />}
                     {name === 'CodePen' && <CodePenIcon />}
+                    {name === 'Medium' && <MediumIcon />}
                   </ProfileLink>
                 </ProfileItem>
               ))}
+            <ProfileItem>
+              <ProfileLink href={`mailto:${email}`}>
+                <EmailIcon />
+              </ProfileLink>
+            </ProfileItem>
           </ProfileItemList>
         </ProfilesContainer>
         <Copy>

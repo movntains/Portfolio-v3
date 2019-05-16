@@ -22,7 +22,7 @@ const Intro = styled.h1`
   margin: 0 0 20px 3px;
   font-size: ${theme.fontSizes.large};
   font-weight: normal;
-  color: ${theme.colors.teal};
+  color: ${theme.colors.offWhite};
   ${media.desktop`font-size: ${theme.fontSizes.medium};`};
   ${media.tablet`font-size: ${theme.fontSizes.medium};`};
 `;
@@ -32,6 +32,7 @@ const Name = styled.h2`
   font-size: 80px;
   letter-spacing: 1px;
   line-height: 1.1;
+  color: ${theme.colors.teal};
   ${media.desktop`font-size: 70px;`};
   ${media.tablet`font-size: 60px;`};
   ${media.phablet`font-size: 50px;`};
@@ -53,6 +54,7 @@ const Blurb = styled.div`
   width: 50%;
   max-width: 500px;
   margin-top: 25px;
+  color: ${theme.colors.lightSlate};
 `;
 
 class Hero extends Component {

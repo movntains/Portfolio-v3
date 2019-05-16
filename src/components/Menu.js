@@ -33,7 +33,7 @@ const Sidebar = styled.div`
   height: 100%;
   margin-left: auto;
   padding: 50px;
-  background-color: ${theme.colors.lightNavy};
+  background-color: ${theme.colors.darkNavy};
   box-shadow: -2px 0px 4px ${theme.colors.transNavy};
   ${media.thone`padding: 25px;`};
   ${media.phablet`width: 75vw;`};
