@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import Layout from '../components/Layout';
-import theme from '../styles/theme';
 import Main from '../styles/Main';
 import Section from '../styles/Section';
 import Heading from '../styles/Heading';

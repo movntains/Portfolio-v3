@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import theme from './theme';
 
-const Subheading = styled.h4`
+const Subheading = styled.h3`
   display: flex;
   align-items: center;
   position: relative;

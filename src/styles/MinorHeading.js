@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import theme from './theme';
 import media from './media';
 
-const MinorHeading = styled.h4`
+const MinorHeading = styled.h2`
   display: flex;
   align-items: center;
   position: relative;

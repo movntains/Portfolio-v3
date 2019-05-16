@@ -22,11 +22,13 @@ const SkillsList = styled.ul`
   list-style: none;
 `;
 
-const FrameworkHeading = styled.h4`
+const FrameworkHeading = styled.h3`
   margin-bottom: 10px;
   padding-bottom: 2px;
   color: ${theme.colors.lightestSlate};
   font-style: italic;
+  font-size: ${theme.fontSizes.xlarge};
+  ${media.tablet`font-size: 17px;`};
 `;
 
 const FRAMEWORKS_FRONTEND = [

@@ -64,6 +64,7 @@ const NavListItem = styled.li`
 
   a {
     &.active {
+      margin-bottom: 20px;
       color: ${theme.colors.teal};
       text-transform: uppercase;
     }

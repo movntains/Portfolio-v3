@@ -26,7 +26,7 @@ const DropdownHeader = styled.div`
     width: 100%;
   `};
 
-  h3 {
+  h2 {
     color: ${theme.colors.lightSlate};
 
     &:hover {
@@ -159,7 +159,7 @@ class FilterDropdown extends Component {
     return (
       <Dropdown onClick={this.handleDropdown}>
         <DropdownHeader>
-          <h3>Filter Projects</h3>
+          <h2>Filter Projects</h2>
           <svg
             className="icon"
             xmlns="http://www.w3.org/2000/svg"

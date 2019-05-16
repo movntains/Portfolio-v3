@@ -42,6 +42,7 @@ const ProfileLink = styled.a`
   svg {
     width: 20px;
     height: 20px;
+    fill: ${theme.colors.lightSlate};
   }
 `;
 
@@ -77,7 +78,12 @@ class Footer extends Component {
                 </ProfileItem>
               ))}
             <ProfileItem>
-              <ProfileLink href={`mailto:${email}`}>
+              <ProfileLink
+                href={`mailto:${email}`}
+                target="_blank"
+                rel="nofollow noopener noreferrer"
+                aria-label="Contact"
+              >
                 <EmailIcon />
               </ProfileLink>
             </ProfileItem>
